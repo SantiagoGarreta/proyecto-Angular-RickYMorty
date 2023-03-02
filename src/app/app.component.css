@@ -1,0 +1,362 @@
+:root {
+    --color-primary: #f3e3a9;
+    --color-secondary: #39b54a;
+    --color-text: #fff;
+    --color-background: #141414;
+    --color-link: #39b54a;
+    --color-button: #39b54a;
+    --color-button-hover: #79d858;
+    --color-menu-gradient: linear-gradient(to right, #39b54a, #2e8b3a, #1f5c2f);
+    --color-hr: #5e6363;
+    --color-red: #e74c3c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 4vw;
+    text-align: center;
+    margin: 0;
+    padding: 2vw 0;
+    color: #6b7c6b
+        /*var(--color-hr)*/
+    ;
+    background-color: #141414
+        /*var(--color-primary)*/
+    ;
+}
+
+h2 {
+    font-size: 3vw;
+    margin: 0;
+    margin-bottom: 1.5vw;
+    padding: 1vw 0;
+    color: #39b54a
+        /*var(--color-secondary)*/
+    ;
+}
+
+h3 {
+    color: #fff
+        /*var(--color-text)*/
+    ;
+    background-color: #39b54a
+        /*var(--color-secondary)*/
+    ;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #39b54a
+        /*var(--color-button)*/
+    ;
+    color: #fff
+        /*var(--color-text)*/
+    ;
+    border: none;
+    padding: 2vw 4vw;
+    font-size: 2.5vw;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1vw;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #79d858
+        /*var(--color-button-hover)*/
+    ;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    margin-inline: 10vw;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+ul.menu {
+    width: 100vw;
+    height: 5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.menu {
+    margin-top: 3vw;
+    font-size: 2vw;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 10%;
+}
+
+a {
+    color: #39b54a
+        /*var(--color-secondary)*/
+    ;
+    text-decoration: none;
+}
+
+.menu a {
+    position: relative;
+    display: block;
+    padding: 10px;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #39b54a, #2e8b3a, #1f5c2f)
+        /*var(--color-menu-gradient)*/
+    ;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu a:hover::before {
+    transform: scaleX(1);
+}
+
+section {
+    max-width: 70vw;
+    margin: 0 auto;
+    padding: 2vw;
+}
+
+footer {
+    text-align: center;
+    background-color: #141414
+        /*var(--background)*/
+    ;
+    padding: 1vw;
+    border-top: 1px solid #ddd;
+    margin-top: 5vh;
+}
+
+header a li {
+    text-align: center;
+    display: block;
+    border: 0;
+}
+
+.charactersContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+.charactersContainer .slider .character-item p,
+.charactersContainer .slider2 .character-item p {
+    font-size: 1.5vw;
+    text-align: center;
+    color: #fff
+        /*var(--text)*/
+    ;
+}
+
+.charactersContainer .slider,
+.charactersContainer .slider2 {
+    width: 70%;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    margin-left: 10.5vw;
+}
+
+.control {
+    position: absolute;
+    width: 3%;
+    height: 3%;
+    padding: 10px;
+    z-index: 2;
+}
+
+.prev,
+.prev2,
+.next,
+.next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2vw;
+    height: 4vh;
+    border: none;
+    color: #fff
+        /*var(--text)*/
+    ;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.prev,
+.prev2 {
+    left: 0;
+    margin-left: 5vw;
+}
+
+.next,
+.next2 {
+    right: 0;
+    margin-right: 5vw;
+}
+
+.imagen {
+    max-width: 100%;
+    height: auto;
+    filter: sepia(80%) brightness(80%);
+}
+
+.charactersContainer .slider .character-item .imagen,
+.charactersContainer .slider2 .character-item .imagen {
+    filter: none;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.character-item:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-15px);
+
+}
+
+.charactersContainer .slider .character-item,
+.charactersContainer .slider2 .character-item {
+    flex: 0 0 20%;
+    width: 400px;
+    height: 400px;
+    margin: 2vw;
+    background-color: #25612d
+        /*var(--color-background)*/
+    ;
+    z-index: 2;
+    transition: transform 0.3s ease-in-out;
+}
+
+li {
+    text-align: center;
+    margin: 1vw 2vw 1vw 1vw;
+    border: 3px solid #39b54a
+        /*var(--secondary)*/
+    ;
+    position: relative;
+    transition: transform 0.3s ease;
+    width: 90%;
+}
+
+li:hover {
+    transform: translateY(-10px);
+}
+
+.sobreNosotros,
+.contacto {
+    text-align: center;
+    color: #39b54a
+        /*var(--color-secondary)*/
+}
+
+.jerry img {
+    width: 15vw;
+    position: fixed;
+    bottom: 0%;
+    right: 5px;
+}
+
+.rickymorty img {
+    width: 20vw;
+    position: fixed;
+    bottom: 0;
+    left: 0px;
+}
+
+.contenedor-animaciones {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+}
+
+.cohete,
+.rickA,
+.pepinoA,
+.pistolaA,
+.cohete2,
+.rickA2,
+.pepinoA2,
+.pistolaA2 {
+    position: absolute;
+    animation: cohete 10s ease-in-out infinite;
+}
+
+
+.cohete img,
+.rickA img,
+.pepinoA img,
+.pistolaA img,
+.cohete2 img,
+.rickA2 img,
+.pistolaA2 img,
+.pepinoA2 img {
+    width: 100px;
+    height: 300px;
+    opacity: 5%;
+}
+
+
+@keyframes cohete {
+    0% {
+        transform: random(translate(calc(-150px + 150px), calc(150px + -150px)), translate(calc(150px + 150px), calc(150px + 150px)));
+    }
+
+    50% {
+        transform: random(translate(calc(-150px + 150px), calc(150px + -150px)), translate(calc(150px + 150px), calc(150px + 150px)));
+    }
+
+    100% {
+        transform: random(translate(calc(-150px + 150px), calc(150px + -150px)), translate(calc(150px + 150px), calc(150px + 150px)));
+    }
+}
+
+/* ANIMATIONS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.menu[data-animation="to-left"] a::before {
+    transform-origin: right;
+}
+
+.menu[data-animation="center"] a::before {
+    transform-origin: center;
+}
+
+.menu[data-animation="bonus"] a::before {
+    transform-origin: right;
+}
+
+.menu[data-animation="bonus"] a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
